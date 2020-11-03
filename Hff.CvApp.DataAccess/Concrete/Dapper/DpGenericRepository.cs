@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Hff.CvApp.DataAccess.Concrete.Dapper
 {
-    class DpGenericRepository<T> : IGenericRepository<T> where T : class, IEntity, new()
+   public class DpGenericRepository<T> : IGenericRepository<T> where T : class, IEntity, new()
     {
         private readonly IDbConnection _connection;
 

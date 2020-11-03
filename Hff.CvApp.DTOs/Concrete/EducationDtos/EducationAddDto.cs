@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hff.CvApp.DTOs.Concrete.EducationDtos
 {
-    class EducationAddDto:IDTO
+   public class EducationAddDto:IDTO
     {
         public string Title { get; set; }
 
