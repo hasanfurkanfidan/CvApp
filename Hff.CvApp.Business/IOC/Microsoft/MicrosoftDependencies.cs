@@ -25,7 +25,8 @@ namespace Hff.CvApp.Business.IOC.Microsoft
         public static void AddCustomDependencies(this IServiceCollection services,IConfiguration configuration)
         {
             services.AddTransient<IDbConnection>(con => new SqlConnection(configuration.GetConnectionString("connectionMsSql")));
-
+            services.AddScoped<IAppUserRepository, DpAppUserRepository>();
+            services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(DpGenericRepository<>));
             services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();

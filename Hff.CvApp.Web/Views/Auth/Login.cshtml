@@ -1,0 +1,47 @@
+﻿@model AppUserLoginModel
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Signin Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+     
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <form asp-action="Login" method="post"  class="form-signin">
+        @*<img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">*@
+        <h1 class="h3 mb-3 font-weight-normal">Giriş Yap</h1>
+
+        <label for="UserName" class="sr-only">Kullanıcı Adı
+        <span class="text-danger" asp-validation-for="@Model.Username"></span>
+        </label>
+        <input asp-for="@Model.Username" class="form-control" placeholder="Kullanıcı Adınız" required autofocus>
+
+        <label for="Password" class="sr-only">Password
+        <span class="text-danger" asp-validation-for="@Model.Password"></span>
+        </label>
+        <input asp-for="@Model.Password" class="form-control" placeholder="Şifreniz" required>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" asp-for="@Model.RememberMe"> Beni Hatırla
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş Yap</button>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+    </form>
+</body>
+</html>

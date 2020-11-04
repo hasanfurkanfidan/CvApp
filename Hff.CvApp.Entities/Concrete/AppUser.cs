@@ -13,7 +13,7 @@ namespace Hff.CvApp.Entities.Concrete
         public string LastName { get; set; }
         public string Adress { get; set; }
         public string Email { get; set; }
-        public int ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public string PhoneNumber { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }

@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<Hff.CvApp.Entities.Concrete.Skill>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        @foreach (var item in Model)
+        {
+            <span>@item.Description</span>
+        }
+    </body>
+    </html>

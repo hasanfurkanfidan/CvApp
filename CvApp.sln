@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hff.CvApp.DataAccess", "Hff
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hff.CvApp.DTOs", "Hff.CvApp.DTOs\Hff.CvApp.DTOs.csproj", "{A9A561D6-5246-4B3D-BC9C-DD96C8ED8201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hff.CvApp.Business", "Hff.CvApp.Business\Hff.CvApp.Business.csproj", "{A82CDF34-57D1-4A36-B41B-DFE5D96CB4CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hff.CvApp.Business", "Hff.CvApp.Business\Hff.CvApp.Business.csproj", "{A82CDF34-57D1-4A36-B41B-DFE5D96CB4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hff.CvApp.Web", "Hff.CvApp.Web\Hff.CvApp.Web.csproj", "{4FA6D9DB-FAF6-4580-948B-322E19553B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A82CDF34-57D1-4A36-B41B-DFE5D96CB4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A82CDF34-57D1-4A36-B41B-DFE5D96CB4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A82CDF34-57D1-4A36-B41B-DFE5D96CB4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA6D9DB-FAF6-4580-948B-322E19553B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA6D9DB-FAF6-4580-948B-322E19553B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA6D9DB-FAF6-4580-948B-322E19553B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA6D9DB-FAF6-4580-948B-322E19553B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
