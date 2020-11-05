@@ -1,0 +1,39 @@
+﻿@model List<ExperienceListDto>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-hover table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Kurum</th>
+        <th>Bölüm</th>
+        <th>Açıklama</th>
+        <th>Başlama Tarihi</th>
+        <th>Bitiş Tarihi</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    <tr>
+        @foreach (var item in Model)
+        {
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>@item.StartDate</td>
+            @if (item.EndDate != null)
+            {
+                <td>@item.EndDate</td>
+            }
+            else
+            {
+                <td> </td>
+            }
+            <td> <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Güncelle</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a></td>
+
+        }
+    </tr>
+</table>
+<br />
+<a class="btn btn-primary" asp-action="Insert">Deneyim Ekle</a>

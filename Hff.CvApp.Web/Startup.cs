@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using FluentValidation.AspNetCore;
 using Hff.CvApp.Business.IOC.Microsoft;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -29,6 +30,7 @@ namespace Hff.CvApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCustomDependencies(Configuration);
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews().AddFluentValidation();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
                 opt =>

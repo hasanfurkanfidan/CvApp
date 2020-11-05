@@ -1,0 +1,15 @@
+﻿@model CertificationAddDto
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="AddCertification" class="form-group" method="post">
+    <div class="form-group">
+        <label>Sertifika Adı:</label>
+        <span asp-validation-for="@Model.Description"></span>
+        <input asp-for="@Model.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-sm">Sertifika Ekle</button>
+    </div>
+</form>

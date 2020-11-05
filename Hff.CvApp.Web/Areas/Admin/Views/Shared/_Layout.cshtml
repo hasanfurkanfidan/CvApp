@@ -26,9 +26,13 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">Admin Panel</div>
             <div class="list-group list-group-flush">
-                <a  asp-action="Index" asp-controller="Home" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="bilgilerim"?"active":"")">Bilgilerim</a>
-                <a  asp-action="ChangePassword" asp-controller="Home" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="sifre"?"active":"") ">Şifre değiştir</a>
-           
+                <a asp-action="Index" asp-controller="Home" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="bilgilerim"?"active":"")">Bilgilerim</a>
+                <a asp-action="ChangePassword" asp-controller="Home" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="sifre"?"active":"") ">Şifre değiştir</a>
+                <a asp-action="Index" asp-controller="Certification" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="sertifikalarım"?"active":"") ">Sertifikalarım</a>
+                <a asp-action="Index" asp-controller="Education" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="egitim"?"active":"") ">Eğitimlerim</a>
+                <a asp-action="Index" asp-controller="Experience" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="deneyim"?"active":"") ">Deneyimlerim</a>
+                <a asp-action="Index" asp-controller="Skill" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="yetenek"?"active":"") ">Yeteneklerim</a>
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->

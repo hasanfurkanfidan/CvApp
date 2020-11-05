@@ -1,0 +1,15 @@
+﻿@model SkillAddDto
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Insert" class="form-group" method="post">
+    <div class="form-group">
+        <label>Deneyim Adı:</label>
+        <span asp-validation-for="@Model.Description"></span>
+        <input asp-for="@Model.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-sm">Yetenek Ekle</button>
+    </div>
+</form>

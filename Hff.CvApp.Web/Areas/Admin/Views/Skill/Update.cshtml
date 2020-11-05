@@ -1,0 +1,17 @@
+﻿@model SkillUpdateDto
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+
+<form class="form-group" asp-action="Update" method="post">
+    <div class="form-group">
+        <label>Yetenek Adı:</label>
+        <span class="text-danger" asp-validation-for="@Model.Description"></span>
+        <input asp-for="@Model.Description" class="form-control" />
+    </div>
+    <input type="hidden" asp-for="@Model.Description" />
+    <div class="form-group">
+        <button class="btn btn-success btn-sm">Güncelle</button>
+    </div>
+</form>

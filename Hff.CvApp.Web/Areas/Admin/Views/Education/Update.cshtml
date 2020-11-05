@@ -1,0 +1,38 @@
+﻿@model EducationUpdateDto
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Update" method="post">
+    <input type="hidden" />
+    <div class="form-group">
+        <label>Okul Adı</label>
+        <span class="text-danger" asp-validation-for="@Model.Title"></span>
+        <input class="form-control" asp-for="@Model.Title" />
+    </div>
+    <div class="form-group">
+        <label>Bölüm Adı</label>
+        <span class="text-danger" asp-validation-for="@Model.SubTitle"></span>
+        <input asp-for="@Model.SubTitle" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Açıklama</label>
+        <span class="text-danger" asp-validation-for="@Model.Description"></span>
+        <input asp-for="@Model.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Başlangıç Tarihi</label>
+        <span class="text-danger" asp-validation-for="@Model.StartDate"></span>
+        <input asp-for="@Model.StartDate" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Bitiş Tarihi</label>
+        <span class="text-danger" asp-validation-for="@Model.EndDate"></span>
+        <input asp-for="@Model.EndDate" type="date" class="form-control" />
+    </div>
+    <input type="hidden" asp-for="@Model.Id" />
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Güncelle</button>
+    </div>
+   
+</form>

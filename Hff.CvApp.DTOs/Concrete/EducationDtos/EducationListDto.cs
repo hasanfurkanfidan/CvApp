@@ -17,6 +17,6 @@ namespace Hff.CvApp.DTOs.Concrete.EducationDtos
 
         public DateTime StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model List<CertificationListDto>
+﻿@model List<SkillListDto>
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -6,7 +6,7 @@
 <table class="table table-hover table-striped table-sm">
     <tr>
         <th>Id</th>
-        <th>Sertifika</th>
+        <th>Yetenek</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -15,11 +15,11 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.Description</td>
-            <td><a asp-action="Remove" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Sil</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Sil</a></td>
             <td><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-success btn-sm">Güncelle</a></td>
         </tr>
     }
 
 </table>
 <br />
-<a asp-action="AddCertification" class="btn btn-primary">Sertifika Ekle</a>
+<a asp-action="Insert" class="btn btn-primary">Deneyim Ekle</a>

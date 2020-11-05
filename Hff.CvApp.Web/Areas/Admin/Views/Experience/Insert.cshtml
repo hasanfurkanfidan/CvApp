@@ -1,0 +1,35 @@
+﻿@model ExperienceAddDto
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+<form class="form-group" action="Insert" method="post">
+    <div class="form-group">
+        <label>Kurum Adı</label>
+        <span class="text-danger" asp-validation-for="@Model.Title"></span>
+        <input class="form-control" asp-for="@Model.Title" />
+    </div>
+    <div class="form-group">
+        <label>Bölüm Adı</label>
+        <span class="text-danger" asp-validation-for="@Model.SubTitle"></span>
+        <input asp-for="@Model.SubTitle" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Açıklama</label>
+        <span class="text-danger" asp-validation-for="@Model.Description"></span>
+        <input asp-for="@Model.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Başlangıç Tarihi</label>
+        <span class="text-danger" asp-validation-for="@Model.StartDate"></span>
+        <input asp-for="@Model.StartDate" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Bitiş Tarihi</label>
+        <span class="text-danger" asp-validation-for="@Model.EndDate"></span>
+        <input asp-for="@Model.EndDate"  class="form-control" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ekle</button>
+    </div>
+</form>
