@@ -14,6 +14,11 @@ namespace Hff.CvApp.Business.Abstract
         /// <param name="password"></param>
         /// <returns></returns>
         bool CheckUser(string userName, string password);
-
+        /// <summary>
+        /// verilen username'in sahip olduğu kullanıcıyı döner.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        AppUser GetByUserName(string userName);
     }
 }

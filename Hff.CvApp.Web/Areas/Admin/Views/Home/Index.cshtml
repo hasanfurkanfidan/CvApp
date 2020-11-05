@@ -1,9 +1,60 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model AppUserUpdateModel
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-<h4>
-    Burası admin paneli
-</h4>
+
+<form asp-action="Index" method="post" class="form-control-sm" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Adınız:</label>
+        <span class="text-danger" asp-validation-for="@Model.FirstName"></span>
+        <input asp-for="@Model.FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Soyadınız:</label>
+        <span class="text-danger" asp-validation-for="@Model.LastName"></span>
+        <input asp-for="@Model.LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Telefon Numaranız:</label>
+        <span class="text-danger" asp-validation-for="@Model.PhoneNumber"></span>
+        <input asp-for="@Model.PhoneNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Ön Yazı:</label>
+        <span class="text-danger" asp-validation-for="@Model.ShortDescription"></span>
+        <input asp-for="@Model.ShortDescription" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <span class="text-danger" asp-validation-for="@Model.Email"></span>
+        <input asp-for="@Model.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Adresiniz:</label>
+        <span class="text-danger" asp-validation-for="@Model.Adress"></span>
+        <input asp-for="@Model.Adress" class="form-control" />
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            @if (!String.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <label>Bir Önceki Resminiz:</label>
+                <img src="/img/@Model.ImageUrl" alt="@Model.FirstName" />
+            }
+            else
+            {
+                <div class="alert alert-light text-center">
+                    Herhangi bir resim kayıtlı değil.
+                </div>
+            }
+        </div>
+        <div class="col-6">
+            <label>Resim Seç:</label>
+            <input type="file" asp-for="@Model.FormFile" class="form-control" />
+        </div>
+    </div>
+    <input type="hidden" asp-for="@Model.Id" />
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>

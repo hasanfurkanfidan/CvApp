@@ -31,6 +31,7 @@ namespace Hff.CvApp.Business.IOC.Microsoft
             services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();
             services.AddTransient<IValidator<CertificationUpdateDto>, CertificationUpdateDtoValidator>();
+            services.AddTransient<IValidator<AppUserPasswordDto>, AppUserPasswordDtoValidator>();
             services.AddTransient<IValidator<CertificationAddDto>, CertificationAddDtoValidator>();
             services.AddTransient<IValidator<SkillUpdateDto>, SkillUpdateDtoValidator>();
             services.AddTransient<IValidator<SkillAddDto>, SkillAddDtoValidator>();

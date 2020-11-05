@@ -20,5 +20,10 @@ namespace Hff.CvApp.Business.Concrete
         {
             return _appUserRepository.CheckUser(userName, password);
         }
+
+        public AppUser GetByUserName(string userName)
+        {
+            return _appUserRepository.GetByUserName(userName);
+        }
     }
 }
