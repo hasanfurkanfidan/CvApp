@@ -26,6 +26,8 @@ namespace Hff.CvApp.Business.IOC.Microsoft
         {
             services.AddTransient<IDbConnection>(con => new SqlConnection(configuration.GetConnectionString("connectionMsSql")));
             services.AddScoped<IAppUserRepository, DpAppUserRepository>();
+            services.AddScoped<ISocialMediaIconRepository, DpSocialMediaRepository>();
+            services.AddScoped<ISocialMediaIconService, SocialMediaIconManager>();
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(DpGenericRepository<>));
             services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));

@@ -14,9 +14,10 @@
         <th>Güncelle</th>
         <th>Sil</th>
     </tr>
-    <tr>
-        @foreach (var item in Model)
-        {
+
+    @foreach (var item in Model)
+    {
+        <tr>
             <td>@item.Id</td>
             <td>@item.Title</td>
             <td>@item.SubTitle</td>
@@ -25,9 +26,9 @@
             <td>@item.EndDate</td>
             <td> <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Güncelle</a></td>
             <td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
 
-        }
-    </tr>
+    }
 </table>
 <br />
 <a class="btn btn-primary" asp-action="Insert">Eğitim Ekle</a>

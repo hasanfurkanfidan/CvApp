@@ -17,6 +17,14 @@
       "files": [
         "jquery.min.js"
       ]
+    },
+    {
+      "library": "font-awesome@5.15.1",
+      "destination": "wwwroot/font-awesome/"
+    },
+    {
+      "library": "jquery-easing@1.4.1",
+      "destination": "wwwroot/jquery-easing/"
     }
   ]
 }

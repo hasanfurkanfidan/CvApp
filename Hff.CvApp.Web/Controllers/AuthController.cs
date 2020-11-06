@@ -40,6 +40,11 @@ namespace Hff.CvApp.Web.Controllers
             }
             return View(model);
         }
+        public async Task<IActionResult> LogOut()
+        {
+           await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home", new { @area = "" });
+        }
 
         private async Task CookieConfiguration(string username, string password, bool rememberMe)
         {

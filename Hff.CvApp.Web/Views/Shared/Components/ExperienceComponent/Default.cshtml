@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Hff.CvApp.DTOs.Concrete.ExperienceDtos.ExperienceListDto>
+<section class="resume-section" id="experience">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Deneyimler</h2>
+        @foreach (var item in Model)
+        {
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">@item.SubTitle</h3>
+            <div class="subheading mb-3">@item.Title</div>
+            <p>@item.Description</p>
+        </div>
+        @if (item.EndDate != null)
+        {
+            <div class="flex-shrink-0"><span class="text-primary">@item.StartDate - @item.EndDate</span></div>
+
+        }
+        else
+        {
+            <div class="flex-shrink-0"><span class="text-primary">@item.StartDate - devam ediyor</span></div>
+
+        }
+    </div>
+        }
+
+
+    </div>
+</section>

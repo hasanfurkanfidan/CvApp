@@ -32,6 +32,8 @@
                 <a asp-action="Index" asp-controller="Education" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="egitim"?"active":"") ">Eğitimlerim</a>
                 <a asp-action="Index" asp-controller="Experience" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="deneyim"?"active":"") ">Deneyimlerim</a>
                 <a asp-action="Index" asp-controller="Skill" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="yetenek"?"active":"") ">Yeteneklerim</a>
+                <a asp-action="Index" asp-controller="SocialMediaIcon" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["Active"]?.ToString()=="sosyalmedya"?"active":"") ">Sosyal Medya İkonlarım</a>
+                <a asp-action="LogOut" asp-controller="Auth" asp-area=""  class="list-group-item list-group-item-action  ">Çıkış Yap</a>
 
             </div>
         </div>
