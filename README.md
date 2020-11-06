@@ -9,6 +9,7 @@ Pek Yakında (http://hasanfurkanfidan.com)
 -Dapper
 -.net Core 3.1
 -Fluent Validation
+-AutoMapper
 ```
 
 
