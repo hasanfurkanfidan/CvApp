@@ -1,6 +1,5 @@
 # CvApp
-
-Pek Yakında (http://hasanfurkanfidan.com)
+http://hasanfurkanfidan.com
 
 ## Kullanılan Teknolojiler
 
